@@ -2230,10 +2230,24 @@
                         }
 
                         if (category && category !== '' && category !== 'all categories') {
-                            // Try to match category with job tags or job type
-                            const categoryMatches = jobTags.some(tag => tag.includes(category)) ||
-                                (jobType && jobType.includes(category)) ||
-                                title.includes(category);
+                            // Define keyword arrays for each category
+                            const categoryKeywords = {
+                                'it': ['it', 'software', 'developer', 'web', 'frontend', 'backend', 'fullstack', 'programmer', 'coding'],
+                                'marketing': ['marketing', 'social media', 'seo', 'content', 'brand'],
+                                'design': ['design', 'ui', 'ux', 'graphic', 'figma', 'photoshop'],
+                                'finance': ['finance', 'accounting', 'financial', 'economist', 'banking']
+                            };
+
+                            // Get keywords for the selected category
+                            const keywords = categoryKeywords[category] || [category];
+
+                            // Check if any keyword matches in title, job type, or tags
+                            const categoryMatches = keywords.some(keyword =>
+                                title.includes(keyword) ||
+                                (jobType && jobType.includes(keyword)) ||
+                                jobTags.some(tag => tag.includes(keyword))
+                            );
+
                             if (!categoryMatches) {
                                 matches = false;
                             }
