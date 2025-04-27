@@ -997,6 +997,318 @@
                 width: calc(100% - 40px);
             }
         }
+
+        /* Featured Jobs Section Styles */
+        .featured-jobs {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2 span {
+            background: linear-gradient(45deg, #ff6b6b, #f9c74f);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Job Filter Styles */
+        .jobs-filter {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .job-search-form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .job-search-form .form-group {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .job-search-form .form-group i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .job-search-form input,
+        .job-search-form select {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .job-search-form input:focus,
+        .job-search-form select:focus {
+            border-color: #f9c74f;
+            box-shadow: 0 0 0 3px rgba(249, 199, 79, 0.2);
+            outline: none;
+        }
+
+        .search-btn {
+            background: linear-gradient(45deg, #ff6b6b, #f9c74f);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 0 20px;
+            height: 44px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            min-width: 130px;
+        }
+
+        .search-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        /* Job Cards Styles */
+        .jobs-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .job-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: rgba(249, 199, 79, 0.3);
+        }
+
+        .job-card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        .company-logo i {
+            font-size: 1.5rem;
+            color: #f9c74f;
+        }
+
+        .job-card-title {
+            flex: 1;
+        }
+
+        .job-card-title h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 5px;
+        }
+
+        .job-card-title p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .bookmark-btn {
+            background: none;
+            border: none;
+            color: #777;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .bookmark-btn:hover {
+            color: #f9c74f;
+        }
+
+        .bookmark-btn.active i {
+            font-weight: 900;
+            color: #f9c74f;
+        }
+
+        .job-card-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .detail-item i {
+            margin-right: 8px;
+            font-size: 0.9rem;
+            color: #f8961e;
+        }
+
+        .job-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: rgba(249, 199, 79, 0.1);
+            color: #f8961e;
+            font-size: 0.75rem;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .job-card-footer {
+            text-align: center;
+        }
+
+        .btn-apply {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 20px;
+            background: linear-gradient(45deg, #ff6b6b, #f9c74f);
+            color: #fff;
+            font-weight: 600;
+            border-radius: 5px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-apply:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .jobs-footer {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .btn-view-all {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 25px;
+            background: transparent;
+            color: #f8961e;
+            font-weight: 600;
+            border: 2px solid #f9c74f;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-view-all i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-view-all:hover {
+            background: rgba(249, 199, 79, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(249, 199, 79, 0.2);
+        }
+
+        .btn-view-all:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Responsive Styles for Featured Jobs */
+        @media screen and (max-width: 992px) {
+            .featured-jobs {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .job-search-form {
+                flex-direction: column;
+            }
+
+            .job-search-form .form-group {
+                width: 100%;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .featured-jobs {
+                padding: 40px 0;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-header p {
+                font-size: 1rem;
+            }
+
+            .jobs-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -1191,6 +1503,210 @@
         </div>
         <button class="notification-close"><i class="fas fa-times"></i></button>
     </div>
+    <!-- Featured Jobs Section -->
+    <!-- Featured Jobs Section -->
+    <section class="featured-jobs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured <span>Jobs</span></h2>
+                <p>Explore top opportunities from leading companies</p>
+            </div>
+            <div class="jobs-filter">
+                <form class="job-search-form">
+                    <div class="form-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Job title or keyword">
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Location">
+                    </div>
+                    <div class="form-group">
+                        <i class="fas fa-briefcase"></i>
+                        <select>
+                            <option value="">All Categories</option>
+                            <option value="it">IT & Software</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="design">Design</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i>
+                        <span>Search</span>
+                    </button>
+                </form>
+            </div>
+            <div class="jobs-wrapper">
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Senior Frontend Developer</h3>
+                            <p>Google Inc.</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New York, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$90K - $120K</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Posted 2 days ago</span>
+                        </div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn-apply">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Product Manager</h3>
+                            <p>Microsoft Corp.</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Seattle, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$110K - $150K</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Posted 1 week ago</span>
+                        </div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">Product</span>
+                        <span class="tag">Management</span>
+                        <span class="tag">Agile</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn-apply">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <div class="job-card-title">
+                            <h3>UX/UI Designer</h3>
+                            <p>Apple Inc.</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Cupertino, USA</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$85K - $110K</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Posted 3 days ago</span>
+                        </div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">UI</span>
+                        <span class="tag">UX</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn-apply">Apply Now</a>
+                    </div>
+                </div>
+
+                <div class="job-card">
+                    <div class="job-card-header">
+                        <div class="company-logo">
+                            <i class="fab fa-amazon"></i>
+                        </div>
+                        <div class="job-card-title">
+                            <h3>Data Scientist</h3>
+                            <p>Amazon Web Services</p>
+                        </div>
+                        <div class="job-card-bookmark">
+                            <button class="bookmark-btn"><i class="far fa-bookmark"></i></button>
+                        </div>
+                    </div>
+                    <div class="job-card-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Remote</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Full-time</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>$100K - $140K</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Posted 5 days ago</span>
+                        </div>
+                    </div>
+                    <div class="job-card-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                    <div class="job-card-footer">
+                        <a href="#" class="btn-apply">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="jobs-footer">
+                <a href="#" class="btn-view-all">View All Jobs <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
     <script type="module">
         // Import Firebase core and initialize
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
@@ -1643,6 +2159,72 @@
                     mainNav.classList.remove('active');
                 }
             });
+        });
+        // featured-jobs
+        // Wait for DOM to fully load
+        document.addEventListener('DOMContentLoaded', function () {
+            // Bookmark toggle functionality
+            const bookmarkButtons = document.querySelectorAll('.bookmark-btn');
+
+            bookmarkButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Toggle active class
+                    this.classList.toggle('active');
+
+                    // Change the icon
+                    const icon = this.querySelector('i');
+                    if (this.classList.contains('active')) {
+                        icon.classList.remove('far');
+                        icon.classList.add('fas');
+
+                        // Show notification
+                        showNotification('Job saved to bookmarks', 'success');
+                    } else {
+                        icon.classList.remove('fas');
+                        icon.classList.add('far');
+
+                        // Show notification
+                        showNotification('Job removed from bookmarks', 'success');
+                    }
+                });
+            });
+
+            // Search form functionality
+            const jobSearchForm = document.querySelector('.job-search-form');
+
+            if (jobSearchForm) {
+                jobSearchForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Get form values
+                    const keyword = this.querySelector('input[placeholder="Job title or keyword"]').value;
+                    const location = this.querySelector('input[placeholder="Location"]').value;
+                    const category = this.querySelector('select').value;
+
+                    // You would typically send this to a server or filter results
+                    console.log('Search params:', { keyword, location, category });
+
+                    // For demo purposes, just show a notification
+                    showNotification('Searching for jobs...', 'success');
+
+                    // You could add filtering logic here
+                });
+            }
+
+            // Helper function for showing notifications (reusing the existing notification component)
+            function showNotification(message, type) {
+                const notification = document.getElementById('auth-notification');
+                const notificationMessage = document.querySelector('.notification-message');
+
+                if (notification && notificationMessage) {
+                    notificationMessage.textContent = message;
+                    notification.classList.add('active', type);
+
+                    setTimeout(() => {
+                        notification.classList.remove('active', 'success', 'error');
+                    }, 3000);
+                }
+            }
         });
     </script>
 </body>
